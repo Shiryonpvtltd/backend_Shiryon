@@ -7,6 +7,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.status(200).send('API is working 🚀');
+});
+
 app.post('/', async (req, res) => {
   const { name, email, message } = req.body;
 
